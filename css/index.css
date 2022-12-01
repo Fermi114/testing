@@ -1,0 +1,269 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+
+.container{
+	max-width: 1180px;
+	margin: 0px auto;
+	padding: 0px 10px;
+}
+
+.header{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+}
+
+.header:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(80, 45, 114);
+	height: 80px;
+	align-items: center;
+	z-index: 2;
+}
+
+.header__logo{
+	flex: 0 0 60px;
+	border-radius: 50%;
+	overflow: hidden;
+	z-index: 3;
+}
+
+.header__logo img{
+	max-width: 100%;
+	display: block;
+}
+
+.header__list{
+	display: flex;
+	position: relative;
+	z-index: 2;
+}
+
+.header__list li{
+	list-style: none;
+	margin: 0px 0px 0px 20px;
+}
+
+.header__link{
+	color: rgb(176, 176, 194);
+	text-transform: uppercase;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.ZagTema img{
+	height: 30px;
+	width: 30px;
+}
+
+@media (max-width:767px){
+
+	body.lock{
+		overflow: hidden;
+	}
+	.header__body{
+		height: 50px;
+	}
+	.header__logo{
+		flex: 0 0 40px;
+	}
+	.header__burger{
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		position: relative;
+		z-index: 3;
+	}
+	.header__burger span{
+		position: absolute;
+		background-color: #fff;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		top: 9px;
+		transition: all 0.3s ease 0s;
+	}
+	.header__burger:before,
+	.header__burger:after{
+		content: '';
+		background-color: #fff;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		transition: all 0.3s ease 0s;
+	}
+
+	.header__burger:before{
+		top: 0;
+	}
+	.header__burger:after{
+		bottom: 0;
+	}
+
+	.header__burger.active span{
+		transform: scale(0);
+	}
+	
+	.header__burger.active:before{
+		transform: rotate(45deg);
+		top: 9px;
+	}
+	.header__burger.active:after{
+		transform: rotate(-45deg);
+		bottom: 9px;
+	}
+
+	.header__menu{
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		transition: all 0.3s ease 0s;
+		background-color: rgb(81, 151, 128);
+		padding: 70px 10px 20px 0px;
+	}
+
+	.header__menu.active{
+		top: 0;
+	}
+
+	.header__list{
+		display: block;
+	}
+	.header__list li{
+		margin: 0px 0px 20px 10px;
+	}
+}
+
+
+
+.header__body{
+	position: relative;
+	z-index: 2;
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	align-items: center;
+}
+
+.body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-attachment: fixed;
+}
+
+.MainZagolovok{
+	margin-top: 80px;
+	height: 50px;
+	font-style: normal;
+	font-size: 30px;
+	font-weight: bold;
+	background-color: rgb(16, 16, 88);
+	color: white;
+	vertical-align: middle;
+}
+
+.ZagTema{
+	width: 100%;
+	height: 70px;
+	font-size: 35px;
+	text-align: center;
+	background-color: rgb(30, 31, 75);
+	color: white;
+	vertical-align: middle;
+}
+
+.Podzagalovok{
+	height: 50px;
+	background-color: rgb(54, 84, 138);
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	vertical-align: middle;
+}
+
+.MainText{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.insideimage{
+	width: 100%;
+}
+
+.container{
+	margin-bottom: 20px;
+	margin-left: 20%;
+	margin-right: 20%;
+	background-color: rgb(202, 216, 241);
+	padding-bottom: 20px;
+}
+
+.spisok{
+	margin-top: auto;
+	font-size: 20px;
+	text-align: left;
+	margin-right: 15%;
+	margin-left: 15%;
+	margin-bottom: 25px ;
+	font-style: oblique;
+	border: 2px solid rgb(79, 95, 150);
+	background-color: rgb(193, 190, 218);
+}
+
+.ZagSpis{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	height: 50px;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.ZaginSpis{
+	margin-top: 10px;
+	margin-bottom: 5px;
+	height: 50px;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.containerkont{
+	margin-top: 90px;
+	margin-left: 15%;
+	margin-right: 35%;
+	background-color: rgb(202, 216, 241);
+	padding-bottom: 20px;
+}
+
+.headr{
+	position: sticky;
+	top: 0;
+	background-color: rgb(65, 57, 185);
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
